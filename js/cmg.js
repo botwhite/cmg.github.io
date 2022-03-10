@@ -164,7 +164,7 @@ async function loadAccount() {
   document.getElementById("mynft").textContent = mynft
   document.getElementById("web3_message").textContent = "Connected"
   document.getElementById("connect_button").style.display = "none"
-  document.getElementById("nft_balance").textContent = "You have " + balance + " Crocs"
+  document.getElementById("nft_balance").textContent = "You have " + balance + " Miners"
 }
 
 
