@@ -29,7 +29,7 @@
     <title>Miner CMG NFT</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/countdown.css">
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
       html,
@@ -85,7 +85,7 @@
               </ul>
             </nav>
           </div>
-         
+          <div id="mynft"></div>
           <div class="hidden socials mt-4 md:flex md:mt-0">
             <a
               href="https://twitter.com/FunkyCrocsNFT"
@@ -205,18 +205,98 @@
         </div>
 
         <div class="row flex flex-col pt-28 pb-14 lg:flex-row">
-          <div class="container">
-            <h1 id="headline">Countdown to Mint!</h1>
-            <div id="countdown">
-              <ul>
-                <li><span id="days"></span>days</li>
-                <li><span id="hours"></span>Hours</li>
-                <li><span id="minutes"></span>Minutes</li>
-                <li><span id="seconds"></span>Seconds</li>
-              </ul>
+          <div class="cocos lg:w-2/4">
+            <img
+              class="w-auto sm:max-w-md mx-auto"
+              src="img/crocs-hero.gif"
+              alt="funky cocodriles"
+            />
+          
+
+        <div
+            class="info lg:w-2/4 lg:pl-8 xl:pb-20 2xl:pl-16 2xl:pr-24 text-center md:text-left" id=""
+          >
+            <h1
+              class="font-kiddos text-4.5xl leading-9 text-white pt-8 lg:pt-0"
+            >
+              An off-the-wall collection of
+              <span class="text-green font-glory font-extrabold"> 1.000 </span>
+              randomly generated Miners NFT.
+            </h1>
+            <p class="text-white text-lg leading-7 font-medium mt-8">
+              NFT Miners are a collection of 1,000 randomly generated, hand-drawn miners on the BSC blockchain. All MINERS NFT CMG owners will be able to STAKE their NFTs to generate the CMG token. Owners will also be able to buy and sell their NFTs on the marketplace. There are 4 rarities distinguished by your miner's arm bracelet: COPPER (60%) ; SILVER (20%) ; GOLD (15%) ; PLATINUM (5%) .
+            </p>
+
+            <h2
+              class="font-kiddos text-4.5xl leading-9 text-white mt-8 lg:pt-0"
+            >
+              Buy
+             
+              awesome Miner Global!
+            </h2>
+
+            <button
+              class="bg-light-green3 text-white text-lg font-glory font-semibold rounded-2.5xl py-2 px-12 tracking-widest mt-6"
+              type="button"
+              id="connect_button"
+              onclick="connectWallet()"
+            >
+              Connect
+            </button>
+
+            <p class="text-white text-lg font-glory font-bold mt-4">
+              <span id="web3_message">Loading web3...</span>
+            </p>
+
+            <label
+              for="mint_amount"
+              class="text-white text-3xl font-normal font-kiddos block mt-8"
+              >Quantity:</label
+            >
+
+            <div class="flex justify-center md:justify-start">
+              <div class="items mt-4">
+                <select
+                  class="mr-4 bg-light-green3 text-white text-xl font-glory font-semibold py-2 px-8 rounded-2.5xl"
+                  id="mint_amount"
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+
+                </select>
+
+                <button
+                  class="bg-purple text-white text-lg font-glory font-semibold rounded-2.5xl py-2 px-12 tracking-widest"
+                  type="button"
+                  onclick="mint()"
+                >
+                  Mint!
+                </button>
+                <button
+                  class="bg-purple text-white text-lg font-glory font-semibold rounded-2.5xl py-2 px-12 tracking-widest"
+                  type="button"
+                  onclick="approveMiner()"
+                >
+                  Approve
+                </button>
+              </div>
             </div>
-            
-        </div>
+
+            <p
+              class="mt-4 text-white text-lg font-glory font-bold"
+              id="nft_balance"
+            >
+              ...
+            </p>
+            <p
+              class="text-white text-lg font-glory font-bold"
+              id="total_mint"
+            ></p>
+            <p class="text-white text-lg font-glory font-bold" id="price"></p>
+          </div>
         </div>
       </div>
     </header>
@@ -1568,8 +1648,6 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
         </div>
       </div>
     </footer>
-    <script src="js/countdown.js"></script>
-
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
