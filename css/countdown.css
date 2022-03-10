@@ -1,32 +1,17 @@
 
-
-
-/* general styling */
-:root {
-  --smaller: .75;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-.container {
+.containercoun {
   color: #4FC27F;
   margin: 0 auto;
   text-align: center;
 }
 
-h1 {
+#headline {
   font-weight: normal;
-  letter-spacing: .125rem;
+  
   text-transform: uppercase;
 }
 
-li {
+.countli li {
   display: inline-block;
   font-size: 1.5em;
   list-style-type: none;
@@ -34,31 +19,23 @@ li {
   text-transform: uppercase;
 }
 
-li span {
+.countli li span {
   display: block;
   font-size: 4.5rem;
 }
 
-.emoji {
-  display: none;
-  padding: 1rem;
-}
 
-.emoji span {
-  font-size: 4rem;
-  padding: 0 .5rem;
-}
 
 @media all and (max-width: 768px) {
-  h1 {
+  #headline {
     font-size: calc(1.5rem * var(--smaller));
   }
   
-  li {
+  .countli  li {
     font-size: calc(1.125rem * var(--smaller));
   }
   
-  li span {
+  .countli li span {
     font-size: calc(3.375rem * var(--smaller));
   }
 }

@@ -30,26 +30,11 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/countdown.css">
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-      html,
-      body {
-        font-family: "Dancing Script", cursive;
-      }
-    </style>
+
   </head>
 
   <body class="font-glory">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KH4CQS2"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  
 
     <header class="bg-hero" role="banner">
       <div class="container pt-10 px-10 mx-auto">
@@ -85,30 +70,24 @@
               </ul>
             </nav>
           </div>
-         
+          <div id="mynft"></div>
           <div class="hidden socials mt-4 md:flex md:mt-0">
             <a
-              href="https://twitter.com/FunkyCrocsNFT"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                width="40"
-                height="40"
-                viewbox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="20" cy="20" r="20" fill="#009CFA"></circle>
-                <path
-                  d="M33.3846 14.2493C32.515 14.6308 31.5884 14.8836 30.6223 15.0064C31.6162 14.413 32.3747 13.4805 32.7313 12.3566C31.8047 12.9091 30.7816 13.2993 29.6913 13.5171C28.8115 12.5802 27.5575 12 26.1895 12C23.5353 12 21.3985 14.1543 21.3985 16.7953C21.3985 17.1753 21.4307 17.5407 21.5096 17.8885C17.524 17.6942 13.9973 15.7839 11.6282 12.874C11.2145 13.5916 10.9719 14.413 10.9719 15.2972C10.9719 16.9575 11.8269 18.4293 13.1014 19.2814C12.3312 19.2668 11.5755 19.0432 10.9354 18.6909C10.9354 18.7055 10.9354 18.7245 10.9354 18.7435C10.9354 21.0732 12.5972 23.0083 14.7763 23.4541C14.3861 23.5608 13.9608 23.6119 13.5194 23.6119C13.2125 23.6119 12.9026 23.5944 12.6118 23.5301C13.2329 25.4286 14.9955 26.8244 17.0914 26.8697C15.4603 28.1456 13.3893 28.9144 11.1473 28.9144C10.7542 28.9144 10.3771 28.8968 10 28.8486C12.1236 30.2181 14.6404 31 17.3545 31C26.1763 31 30.9994 23.6923 30.9994 17.358C30.9994 17.1461 30.9921 16.9415 30.9818 16.7383C31.9333 16.0631 32.7328 15.2198 33.3846 14.2493Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
+            class="pl-3"
+            href="https://t.me/communityminer_official"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              width="40"
+              height="40"
+              src="img/icons/instagram.png"
+              alt="instagram"
+            />
+          </a>
             <a
               class="pl-3"
-              href="https://discord.com/invite/qXJzzSQHcK"
+              href="discord"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -134,32 +113,8 @@
                 ></path>
               </svg>
             </a>
-            <a
-              class="pl-3"
-              href="https://www.instagram.com/cmgnft/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                width="40"
-                height="40"
-                src="img/icons/instagram.png"
-                alt="instagram"
-              />
-            </a>
-            <a
-              class="pl-3"
-              href="https://opensea.io/collection/CMGNFT"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                width="40"
-                height="40"
-                src="img/icons/opensea.png"
-                alt="open sea"
-              />
-            </a>
+           
+           
           </div>
 
           <!-- Mobile menu -->
@@ -205,10 +160,22 @@
         </div>
 
         <div class="row flex flex-col pt-28 pb-14 lg:flex-row">
-          <div class="container">
-            <h1 id="headline">Countdown to Mint!</h1>
+          <div class="cocos lg:w-2/4">
+            <img
+              class="w-auto sm:max-w-md mx-auto"
+              src="img/crocs-hero.gif"
+              alt="funky cocodriles"
+            />
+         
+          </div>
+
+          <div
+            class="info lg:w-2/4 lg:pl-8 xl:pb-20 2xl:pl-16 2xl:pr-24 text-center md:text-left"
+          >
+          <div class="containercoun">
+            <h1 id="headline">Countdown to mint</h1>
             <div id="countdown">
-              <ul>
+              <ul class="countli">
                 <li><span id="days"></span>days</li>
                 <li><span id="hours"></span>Hours</li>
                 <li><span id="minutes"></span>Minutes</li>
@@ -217,6 +184,20 @@
             </div>
             
         </div>
+            </div>
+
+            <p
+              class="mt-4 text-white text-lg font-glory font-bold"
+              id="nft_balance"
+            >
+              ...
+            </p>
+            <p
+              class="text-white text-lg font-glory font-bold"
+              id="total_mint"
+            ></p>
+            <p class="text-white text-lg font-glory font-bold" id="price"></p>
+          </div>
         </div>
       </div>
     </header>
@@ -441,12 +422,21 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
                 emerge from the following trait options:
               </p>
               <ul class="list-disc font-bold text-white text-xl pt-5 pl-5">
-                <li>Skin</li>
+                <li>Helmets</li>
+                <li>Hair</li>
+                <li>Eyes</li>
+                <li>Beard</li>
+                <li>Mouth</li>
+                <li>Nose</li>
+                <li>Shirt</li>
+                <li>Trousers</li>
+                <li>Boots</li>
+                <li>Tools</li>
+                <li>Gloves</li>
+                <li>Body</li>
                 <li>Background</li>
-                <li>Eyes & Eyewear</li>
-                <li>Clothing</li>
-                <li>Headwear</li>
-                <li>Accesories</li>
+                
+                
               </ul>
               <p
                 class="font-bold text-white text-xl pt-5 text-center md:text-left"
@@ -474,41 +464,24 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
               <div class="wrapper pt-8 grid grid-cols-1 xl:grid-cols-2 xl:pl-7">
                 <div class="chars text-center md:text-left">
                   <p class="font-regular text-white text-lg">
-                    <span class="font-bold">Skin:</span> Green (10%)
+                    <span class="font-bold">COPPER:</span> (60%)
                   </p>
                   <p class="font-regular text-white text-lg">
-                    <span class="font-bold">Background:</span> Red (10%)
+                    <span class="font-bold">SILVER:</span> (20%)
                   </p>
-                  <p class="font-regular text-white text-lg">
-                    <span class="font-bold">Eyes & Eyewear:</span> 3D Glasses
-                    (3%)
-                  </p>
+                 
                 </div>
                 <div class="chars text-center md:text-left">
                   <p class="font-regular text-white text-lg">
-                    <span class="font-bold">Clothing:</span> Yellow Basketball
-                    Shirt (2%)
+                    <span class="font-bold">GOLD:</span> (15%)
                   </p>
                   <p class="font-regular text-white text-lg">
-                    <span class="font-bold">Headwear:</span> Hipster Hat (2%)
+                    <span class="font-bold">DIAMOND :</span> (5%)
                   </p>
-                  <p class="font-regular text-white text-lg">
-                    <span class="font-bold">Accesories:</span> Nose Piercing
-                    (8%)
-                  </p>
+                  
                 </div>
 
-                <!-- <div class="navigation flex items-center justify-evenly mt-4 xl:mt-0">
-                                    <svg class="prev-btn cursor-pointer" width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="24.5" transform="matrix(1 0 0 -1 24.5 24.5)" fill="#4FC27F"/>
-                                        <path d="M16.6967 22.2644L25.941 12.7185C26.8699 11.7605 28.3744 11.7605 29.3033 12.7185C30.2322 13.6765 30.2322 15.2306 29.3033 16.1897L21.7396 24L29.3033 31.8102C30.2322 32.7683 30.2322 34.3234 29.3033 35.2815C28.3744 36.2395 26.8699 36.2395 25.941 35.2815L16.6967 25.7356C15.7678 24.7776 15.7678 23.2235 16.6967 22.2644Z" fill="#115900"/>
-                                    </svg>
-
-                                    <svg class="next-btn cursor-pointer" width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="24.5" transform="matrix(-1 0 0 1 24.5 24.5)" fill="#4FC27F"/>
-                                        <path d="M32.3033 26.7356L23.059 36.2815C22.1301 37.2395 20.6256 37.2395 19.6967 36.2815C18.7678 35.3235 18.7678 33.7694 19.6967 32.8103L27.2604 25L19.6967 17.1898C18.7678 16.2317 18.7678 14.6766 19.6967 13.7185C20.6256 12.7605 22.1301 12.7605 23.059 13.7185L32.3033 23.2644C33.2322 24.2224 33.2322 25.7765 32.3033 26.7356Z" fill="#115900"/>
-                                    </svg>    
-                                </div> -->
+               
               </div>
             </div>
           </div>
@@ -833,49 +806,10 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
                 alt="graff croc"
               />
               <div class="text-info pl-6 mt-2 text-center sm:text-left">
-                <h3 class="font-extrabold text-3xl text-white">Graff</h3>
-                <p class="font-medium text-white text-2xl">Lead Artist</p>
+                <h3 class="font-extrabold text-3xl text-white">ZYBER</h3>
+                <p class="font-medium text-white text-2xl">Artist</p>
                 <div class="icons flex mt-3">
-                  <a
-                    href="https://twitter.com/Graff242"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      class="twitter"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewbox="0 0 24 24"
-                      fill="#FFF"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578 9.3 9.3 0 0 1-2.958 1.13 4.66 4.66 0 0 0-7.938 4.25 13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568 4.692 4.692 0 0 1-2.104.08 4.661 4.661 0 0 0 4.352 3.234 9.348 9.348 0 0 1-5.786 1.995 9.5 9.5 0 0 1-1.112-.065 13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z"
-                      ></path>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/graffveinticuatro"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      class="instagram ml-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewbox="0 0 24 24"
-                      fill="#FFF"
-                      stroke-width="2"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M7.465 1.066C8.638 1.012 9.012 1 12 1c2.988 0 3.362.013 4.534.066 1.172.053 1.972.24 2.672.511.733.277 1.398.71 1.948 1.27.56.549.992 1.213 1.268 1.947.272.7.458 1.5.512 2.67C22.988 8.639 23 9.013 23 12c0 2.988-.013 3.362-.066 4.535-.053 1.17-.24 1.97-.512 2.67a5.396 5.396 0 0 1-1.268 1.949c-.55.56-1.215.992-1.948 1.268-.7.272-1.5.458-2.67.512-1.174.054-1.548.066-4.536.066-2.988 0-3.362-.013-4.535-.066-1.17-.053-1.97-.24-2.67-.512a5.397 5.397 0 0 1-1.949-1.268 5.392 5.392 0 0 1-1.269-1.948c-.271-.7-.457-1.5-.511-2.67C1.012 15.361 1 14.987 1 12c0-2.988.013-3.362.066-4.534.053-1.172.24-1.972.511-2.672a5.396 5.396 0 0 1 1.27-1.948 5.392 5.392 0 0 1 1.947-1.269c.7-.271 1.5-.457 2.67-.511zm8.98 1.98c-1.16-.053-1.508-.064-4.445-.064-2.937 0-3.285.011-4.445.064-1.073.049-1.655.228-2.043.379-.513.2-.88.437-1.265.822a3.412 3.412 0 0 0-.822 1.265c-.151.388-.33.97-.379 2.043-.053 1.16-.064 1.508-.064 4.445 0 2.937.011 3.285.064 4.445.049 1.073.228 1.655.379 2.043.176.477.457.91.822 1.265.355.365.788.646 1.265.822.388.151.97.33 2.043.379 1.16.053 1.507.064 4.445.064 2.938 0 3.285-.011 4.445-.064 1.073-.049 1.655-.228 2.043-.379.513-.2.88-.437 1.265-.822.365-.355.646-.788.822-1.265.151-.388.33-.97.379-2.043.053-1.16.064-1.508.064-4.445 0-2.937-.011-3.285-.064-4.445-.049-1.073-.228-1.655-.379-2.043-.2-.513-.437-.88-.822-1.265a3.413 3.413 0 0 0-1.265-.822c-.388-.151-.97-.33-2.043-.379zm-5.85 12.345a3.669 3.669 0 0 0 4-5.986 3.67 3.67 0 1 0-4 5.986zM8.002 8.002a5.654 5.654 0 1 1 7.996 7.996 5.654 5.654 0 0 1-7.996-7.996zm10.906-.814a1.337 1.337 0 1 0-1.89-1.89 1.337 1.337 0 0 0 1.89 1.89z"
-                      ></path>
-                    </svg>
-                  </a>
+                  
                 </div>
                 <p class="font-medium text-white text-lg pt-4">
                   Artist, art lover. Passionate for cartoons,
@@ -893,53 +827,14 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
               />
               <div class="text-info pl-6 mt-2 text-center sm:text-left">
                 <h3 class="font-extrabold text-3xl text-white sm:text-left">
-                  Turupawn
+                  BotGenie
                 </h3>
                 <p class="font-medium text-white text-2xl">Blockchain Dev</p>
                 <div class="icons flex mt-3">
-                  <a
-                    href="https://twitter.com/turupawn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      class="twitter"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewbox="0 0 24 24"
-                      fill="#FFF"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578 9.3 9.3 0 0 1-2.958 1.13 4.66 4.66 0 0 0-7.938 4.25 13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568 4.692 4.692 0 0 1-2.104.08 4.661 4.661 0 0 0 4.352 3.234 9.348 9.348 0 0 1-5.786 1.995 9.5 9.5 0 0 1-1.112-.065 13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z"
-                      ></path>
-                    </svg>
-                  </a>
-                  <a
-                    href="https://github.com/Turupawn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      class="github ml-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewbox="0 0 24 24"
-                      fill="#FFF"
-                      stroke-width="2"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-                      ></path>
-                    </svg>
-                  </a>
+                 
                 </div>
                 <p class="font-medium text-white text-lg pt-4">
-                  Launched his first blockchain applications in 2013 and has
+                  Launched his first blockchain applications in 2019 and has
                   been developing in the space ever since.
                 </p>
               </div>
@@ -950,31 +845,12 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
               <img
                 class="object-cover max-w-xxs mx-auto sm:mx-0"
                 src="img/team/caco.png"
-                alt="caco croc"
               />
               <div class="text-info pl-6 mt-2 text-center sm:text-left">
-                <h3 class="font-extrabold text-3xl text-white">c4k0</h3>
+                <h3 class="font-extrabold text-3xl text-white">The_King_Pyra</h3>
                 <p class="font-medium text-white text-2xl">Project Manager</p>
                 <div class="icons flex mt-3">
-                  <a
-                    href="https://twitter.com/c4k0shi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      class="twitter"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewbox="0 0 24 24"
-                      fill="#FFF"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578 9.3 9.3 0 0 1-2.958 1.13 4.66 4.66 0 0 0-7.938 4.25 13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568 4.692 4.692 0 0 1-2.104.08 4.661 4.661 0 0 0 4.352 3.234 9.348 9.348 0 0 1-5.786 1.995 9.5 9.5 0 0 1-1.112-.065 13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z"
-                      ></path>
-                    </svg>
-                  </a>
+                  
                 </div>
                 <p class="font-medium text-white text-lg pt-4">
                   Crypto investor and product and project manager with broad
@@ -1423,40 +1299,7 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
         </div>
       </div>
 
-      <!-- JOIN DISCORD CTA -->
-
-      <div class="discord-cta bg-light-green2 pb-10 lg:pb-0">
-        <div class="container mx-auto flex flex-col lg:flex-row">
-          <img
-            class="max-w-sm mx-auto lg:w-auto"
-            src="img/croc-cta-disc.png"
-            alt="coco discord"
-          />
-          <div
-            class="wrapper flex flex-col items-center justify-center mx-auto"
-          >
-            <h2
-              class="font-kiddos font-medium text-white text-4xl text-center mt-5 lg:mt-0"
-            >
-              Want to stay up to date with the
-              <span class="text-5xl">latest news and developments?</span>
-            </h2>
-            <a
-              class="mt-8 py-2 px-4 bg-purple rounded-2.5xl text-white text-lg font-glory font-semibold tracking-widest lg:px-10 2xl:px-20"
-              href="https://discord.com/invite/qXJzzSQHcK"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Join our Discord Server
-            </a>
-          </div>
-          <img
-            class="hidden lg:block"
-            src="img/croc-cta-disc2.png"
-            alt="coco discord"
-          />
-        </div>
-      </div>
+    
     </main>
 
     <footer class="bg-semi-black py-16 md:py-24">
@@ -1473,26 +1316,13 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
             <h3 class="font-semibold text-white text-lg">
               &copy; 2022 CMG NFT MINERS
             </h3>
-            <!-- <nav>
-                        <ul class="list-none font-medium text-white text-lg">
-                            <li>
-                                <a href="#">
-                                    Terms and Privacy
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Privacy Policy
-                                </a>
-                            </li>
-                        </ul>
-                    </nav> -->
+         
           </div>
           <div
             class="icons pt-7 pl-7 flex items-center justify-center md:pt-0 md:border-l md:border-white md:border-dashed"
           >
             <a
-              href="https://discord.com/invite/qXJzzSQHcK"
+              href="discord"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1518,29 +1348,10 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
                 ></path>
               </svg>
             </a>
+           
             <a
               class="pl-3"
-              href="https://twitter.com/FunkyCrocsNFT"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                width="40"
-                height="40"
-                viewbox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="20" cy="20" r="20" fill="#009CFA"></circle>
-                <path
-                  d="M33.3846 14.2493C32.515 14.6308 31.5884 14.8836 30.6223 15.0064C31.6162 14.413 32.3747 13.4805 32.7313 12.3566C31.8047 12.9091 30.7816 13.2993 29.6913 13.5171C28.8115 12.5802 27.5575 12 26.1895 12C23.5353 12 21.3985 14.1543 21.3985 16.7953C21.3985 17.1753 21.4307 17.5407 21.5096 17.8885C17.524 17.6942 13.9973 15.7839 11.6282 12.874C11.2145 13.5916 10.9719 14.413 10.9719 15.2972C10.9719 16.9575 11.8269 18.4293 13.1014 19.2814C12.3312 19.2668 11.5755 19.0432 10.9354 18.6909C10.9354 18.7055 10.9354 18.7245 10.9354 18.7435C10.9354 21.0732 12.5972 23.0083 14.7763 23.4541C14.3861 23.5608 13.9608 23.6119 13.5194 23.6119C13.2125 23.6119 12.9026 23.5944 12.6118 23.5301C13.2329 25.4286 14.9955 26.8244 17.0914 26.8697C15.4603 28.1456 13.3893 28.9144 11.1473 28.9144C10.7542 28.9144 10.3771 28.8968 10 28.8486C12.1236 30.2181 14.6404 31 17.3545 31C26.1763 31 30.9994 23.6923 30.9994 17.358C30.9994 17.1461 30.9921 16.9415 30.9818 16.7383C31.9333 16.0631 32.7328 15.2198 33.3846 14.2493Z"
-                  fill="white"
-                ></path>
-              </svg>
-            </a>
-            <a
-              class="pl-3"
-              href="https://www.instagram.com/funkycrocsnft/"
+              href="https://t.me/communityminer_official"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1551,19 +1362,7 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
                 alt="instagram"
               />
             </a>
-            <a
-              class="pl-3"
-              href="https://opensea.io/collection/funkycrocs"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                width="40"
-                height="40"
-                src="img/icons/opensea.png"
-                alt="open sea"
-              />
-            </a>
+            
           </div>
         </div>
       </div>
