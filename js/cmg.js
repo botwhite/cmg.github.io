@@ -13,7 +13,7 @@ var available
 var mynft;
 var currentAddr = null;
 var balanceNFT
-const minerAddress = '0xEfca24b76aBbd794112b02B7293b59f7Ca3A23F5'
+const minerAddress = '0x01595cB3a6F9c496Dcacb3b094A5Fc4B46b9A4Cc'
 
 const tokenAddress = '0xfA75692e171fe75BcA9D8B2150f4831E30269312' // mainnet busd
 //'0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7' //testnet busd
