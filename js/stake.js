@@ -122,14 +122,15 @@ async function loadAccount() {
         const nftdiv = document.getElementById("card-list")
         const insertarnft = document.createElement("li")
         insertarnft.innerHTML = ` 
-        
+     
         <a class="card-image is-loaded"  style="background-image: url(${nftsMis})" data-image-full="${nftsMis}">
         <img src="${nftsMis}" alt="CMG" />
         </a>                       
-    <div class="card-description">
-        <h2>Rango ${nftrango}</h2>
-        <p><button class="bubbly-button">Stake</button></p>
-    </div>
+        <div class="card-description">
+            <h2>Rango ${nftrango}</h2>
+            <p><button class="bubbly-button">Stake</button></p>
+        </div>
+        
     `
     nftdiv.appendChild(insertarnft)
        })

@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
-import "hardhat/console.sol";
+//import "hardhat/console.sol";
 
 contract NftStake is IERC721Receiver, ReentrancyGuard {
     using SafeMath for uint256;
