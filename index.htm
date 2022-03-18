@@ -29,7 +29,6 @@
     <title>Miner CMG NFT</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/countdown.css">
 
   </head>
 
@@ -172,18 +171,75 @@
           <div
             class="info lg:w-2/4 lg:pl-8 xl:pb-20 2xl:pl-16 2xl:pr-24 text-center md:text-left"
           >
-          <div class="containercoun">
-            <h1 id="headline">Countdown to mint</h1>
-            <div id="countdown">
-              <ul class="countli">
-                <li><span id="days"></span>days</li>
-                <li><span id="hours"></span>Hours</li>
-                <li><span id="minutes"></span>Minutes</li>
-                <li><span id="seconds"></span>Seconds</li>
-              </ul>
-            </div>
-            
-        </div>
+            <h1
+              class="font-kiddos text-4.5xl leading-9 text-white pt-8 lg:pt-0"
+            >
+              An off-the-wall collection of
+              <span class="text-green font-glory font-extrabold"> 1.000 </span>
+              randomly generated Miners NFT.
+            </h1>
+            <p class="text-white text-lg leading-7 font-medium mt-8">
+              NFT Miners are a collection of 1,000 randomly generated, hand-drawn miners on the BSC blockchain. All MINERS NFT CMG owners will be able to STAKE their NFTs to generate the CMG token. Owners will also be able to buy and sell their NFTs on the marketplace. There are 4 rarities distinguished by your miner's arm bracelet: COPPER (60%) ; SILVER (20%) ; GOLD (15%) ; DIAMOND (5%) .
+            </p>
+
+            <h2
+              class="font-kiddos text-4.5xl leading-9 text-white mt-8 lg:pt-0"
+            >
+              Buy
+              <!-- <span class="text-green font-glory font-extrabold">
+                            3
+                        </span> -->
+              awesome Miner Global!
+            </h2>
+
+            <button
+              class="bg-light-green3 text-white text-lg font-glory font-semibold rounded-2.5xl py-2 px-12 tracking-widest mt-6"
+              type="button"
+              id="connect_button"
+              onclick="connectWallet()"
+            >
+              Connect
+            </button>
+
+            <p class="text-white text-lg font-glory font-bold mt-4">
+              <span id="web3_message">Loading web3...</span>
+            </p>
+
+            <label
+              for="mint_amount"
+              class="text-white text-3xl font-normal font-kiddos block mt-8"
+              >Quantity:</label
+            >
+
+            <div class="flex justify-center md:justify-start">
+              <div class="items mt-4">
+                <select
+                  class="mr-4 bg-light-green3 text-white text-xl font-glory font-semibold py-2 px-8 rounded-2.5xl"
+                  id="mint_amount"
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+
+                </select>
+
+                <button
+                  class="bg-purple text-white text-lg font-glory font-semibold rounded-2.5xl py-2 px-12 tracking-widest"
+                  type="button"
+                  onclick="mint()"
+                >
+                  Mint!
+                </button>
+                <button
+                  class="bg-purple text-white text-lg font-glory font-semibold rounded-2.5xl py-2 px-12 tracking-widest"
+                  type="button"
+                  onclick="approveMiner()"
+                >
+                  Approve
+                </button>
+              </div>
             </div>
 
             <p
@@ -321,7 +377,7 @@
               </div>
               <div class="text-info text-center md:text-left">
                 <h2 class="font-kiddos text-3xl text-dark-green py-2">
-                  Are you Miner enough to be a member of mine workers?
+                  Are you funky enough to be a member of mine workers?
                 </h2>
                 <p class="font-medium text-lg text-dark-green leading-6">
 We're a community of fun, fabulous, and cool collectors ready to party whenever the tempo drops. Swimming on the BSC blockchain and running on the CMG ecosystem token, The Global Miner and its owners become one with mining, where it's always time to have a good time. It's a shady place, but it's our home of chaos and debauchery. Welcome to CMG NFT MINER and get ready to have fun.
@@ -416,25 +472,25 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
               <p
                 class="font-regular text-white text-lg text-center md:text-left"
               >
-                Each 100% unique and hand-drawn MINER CMG collectible is
+                Each 100% unique and hand-drawn Funky MINER CMG collectible is
                 programmatically and randomly generated from over 120 different
                 traits. A MINERS NFT has its own set of unique features that
                 emerge from the following trait options:
               </p>
               <ul class="list-disc font-bold text-white text-xl pt-5 pl-5">
-                <li>Helmets</li>
-                <li>Hair</li>
-                <li>Eyes</li>
-                <li>Beard</li>
-                <li>Mouth</li>
-                <li>Nose</li>
-                <li>Shirt</li>
-                <li>Trousers</li>
-                <li>Boots</li>
-                <li>Tools</li>
-                <li>Gloves</li>
-                <li>Body</li>
-                <li>Background</li>
+                <li>	Helmets	</li>
+                <li>	Hair	</li>
+                <li>	Eyes	</li>
+                <li>	Beard	</li>
+                <li>	Mouth	</li>
+                <li>	Nose	</li>
+                <li>	Shirt	</li>
+                <li>	Trousers	</li>
+                <li>	Boots	</li>
+                <li>	Tools	</li>
+                <li>	Gloves	</li>
+                <li>	Body	</li>
+                <li>	Background	</li>
                 
                 
               </ul>
@@ -692,7 +748,7 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
             >
               <h3 class="font-bold text-yellow text-2xl">Raffle</h3>
               <p class="font-medium text-white text-lg pt-2">
-                Owners who have limited edition PLATINIUM rank CMG MINERS will be entered into a raffle for 1000 CMG for the winner.
+                Owners who have limited edition PLATINIUM rank CMG MINERS will be entered into a raffle for 10,000 CMG for the winner.
               </p>
             </div>
           </div>
@@ -1036,7 +1092,7 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
               </h3>
               <div class="accordion-answer rounded-xl bg-brown -mt-5 z-0">
                 <p class="font-medium text-white text-lg pt-12 pr-6 pb-8 pl-9">
-                  Each Miner Global costs 1000 CMG + gas.
+                  Each Funky Miner costs 1000 CMG + gas.
                 </p>
               </div>
             </div>
@@ -1247,7 +1303,7 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
               </h3>
               <div class="accordion-answer rounded-xl bg-brown -mt-5 z-0">
                 <p class="font-medium text-white text-lg pt-12 pr-6 pb-8 pl-9">
-                  Listing a CMG MINER NFT on Marketplace doesn’t have a cost, other
+                  Listing a Funky CMG MINER NFT on Marketplace doesn’t have a cost, other
                   than the gas fees required in order to list one.
                 </p>
               </div>
@@ -1367,8 +1423,6 @@ We're a community of fun, fabulous, and cool collectors ready to party whenever 
         </div>
       </div>
     </footer>
-    <script src="js/countdown.js"></script>
-
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
