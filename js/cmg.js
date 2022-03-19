@@ -109,7 +109,7 @@ async function loadAccount() {
   balanceNFT = await contract.methods.tokensOfOwner(accounts[0]).call()
  
   for (let e = 0; e  < balanceNFT.length; e++) {
-    imgURL= "http://157.245.126.14/" + balanceNFT[e]
+    imgURL= "https://bnbspacego.com/" + balanceNFT[e]
     axios.get( imgURL )
        .then( (response) => {
         // función que se ejecutará al recibir una respuesta
@@ -123,7 +123,7 @@ async function loadAccount() {
         insertarnft.innerHTML = `                        
         <img src="${nftsMis}" alt="Psychopomp" />
     <div class="card-description">
-        <h2>Rango ${nftrango}</h2>
+        <h1>Rango ${nftrango}</h1>
         <p></p>
     </div>`
     nftdiv.appendChild(insertarnft)

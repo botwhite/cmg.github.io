@@ -109,7 +109,7 @@ async function loadAccount() {
   balanceNFT = await contract.methods.tokensOfOwner(accounts[0]).call()
  
   for (let e = 0; e  < balanceNFT.length; e++) {
-    imgURL= "http://157.245.126.14/" + balanceNFT[e]
+    imgURL= "http://127.0.0.1/" + balanceNFT[e]
     axios.get( imgURL )
        .then( (response) => {
          // función que se ejecutará al recibir una respuesta
