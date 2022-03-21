@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
-//import "hardhat/console.sol";
+
 
 contract NftStake is IERC721Receiver, ReentrancyGuard {
     using SafeMath for uint256;
@@ -146,8 +146,9 @@ contract NftStake is IERC721Receiver, ReentrancyGuard {
 
         // delete stake record, effectively unstaking it
         delete receipt[tokenId];
+        jefe[msg.sender].mount = jefe[msg.sender].mount - 1;
         
-
+        
         // return token
         nftToken.safeTransferFrom(address(this), msg.sender, tokenId);
 
@@ -266,6 +267,14 @@ contract NftStake is IERC721Receiver, ReentrancyGuard {
        return jefe[msg.sender].mount;
     }
 
+
+    function setPrice(uint256 _newPriceCopper, uint256 _newPriceSilver ,uint256 _newPriceGold,uint256 _newPriceDiamon ) public onlyDao {
+            copper_tokensPerBlock = _newPriceCopper;
+            SILVER_tokensPerBlock =_newPriceSilver;
+            GOLD_tokensPerBlock = _newPriceGold;
+            DIAMOND_tokensPerBlock = _newPriceDiamon;
+
+    }
     
     /** Add Function to allow the DAO to forcibly unstake an NFT and return it to the owner */
 }

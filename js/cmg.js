@@ -123,6 +123,7 @@ async function loadAccount() {
         insertarnft.innerHTML = `                        
         <img src="${nftsMis}" alt="Psychopomp" />
     <div class="card-description">
+        ID NFT ${balanceNFT[e]}
         <h1>Rango ${nftrango}</h1>
         <p></p>
     </div>`

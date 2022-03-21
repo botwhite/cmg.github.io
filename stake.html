@@ -158,18 +158,35 @@
             </ul>
           </nav>
         </div>
-        <a href="#" class="boton azul">Aprobar Minar</a>
-        <a href="#" class="boton azul">Minar Todos</a>
-        <a href="#" class="boton azul">Reclamar todos Diamantes</a>
-      
+     
+        <button onclick="NftApro()" id="aprobar" class="boton azul" >Aprobar Minar</button>
+        <button onclick="StakeALL()"  class="boton azul">Minar Todos</button>
+        <button  class="boton azul">Reclamar todos Diamantes</button>
+        <table class="styled-table">
+          <thead>
+              <tr>
+                  <th>Your Miner</th>
+                  <th>Stake</th>
+                  <th>Total Stake</th>
+                  <th>Total $CMG Mined</th>
+              </tr>
+          </thead>
+          <tbody>
+           
+              <tr class="active-row">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <!-- and so on... -->
+          </tbody>
+      </table>
           <div id="misnft">
             <ul class="card-list" id="card-list">
              
             </ul>
-          
-       
-      
-        </div>
+          </div>
      
         </div>
 
