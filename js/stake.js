@@ -17,7 +17,8 @@ var IsAproba;
 var stake;
 var rangonftss = [];
 var iddeltango;
-var balanceStake, TotalMinado;
+var balanceStake;
+var TotalMinado;
 
 const minerAddress = '0x01595cB3a6F9c496Dcacb3b094A5Fc4B46b9A4Cc'
 const stakeAddress = '0xaD2435a27b175BF762f00D4C094Ccf8A653a307a'
@@ -117,7 +118,7 @@ async function loadAccount() {
   balance = await contract.methods.balanceOf(accounts[0]).call()
   balanceStake = await stake.methods.misnft(accounts[0]).call()
   
-  console.log(balanceStake)
+  //console.log(balanceStake)
   balanceNFT = await contract.methods.tokensOfOwner(accounts[0]).call()
   //es aprovado
   IsAproba = await contract.methods.isApprovedForAll(accounts[0], stakeAddress).call()
@@ -371,7 +372,7 @@ const Stake = async (_idnfts, _rango) => {
 
 //Unstaker all
 const UnStakeALL = async () => {
-
+  console.log(balanceStake)
   stake.methods.unStakeNFT(balanceStake).send({ from: accounts[0] }).then(result => {
 
   }).catch((err) => {
@@ -380,6 +381,7 @@ const UnStakeALL = async () => {
 
 
 }
+
 
 //Unstaker 
 const UnStake = async (_idnfts) => {
