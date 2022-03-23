@@ -21,7 +21,7 @@ var balanceStake;
 var TotalMinado;
 
 const minerAddress = '0x01595cB3a6F9c496Dcacb3b094A5Fc4B46b9A4Cc'
-const stakeAddress = '0xaD2435a27b175BF762f00D4C094Ccf8A653a307a'
+const stakeAddress = '0xCCfBB3F88Dd09e6c85C3B157e0328D344885d421'
 
 const tokenAddress = '0xfA75692e171fe75BcA9D8B2150f4831E30269312' // mainnet busd
 //'0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7' //testnet busd
