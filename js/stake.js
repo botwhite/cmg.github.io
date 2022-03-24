@@ -21,7 +21,7 @@ var balanceStake;
 var TotalMinado;
 
 const minerAddress = '0x01595cB3a6F9c496Dcacb3b094A5Fc4B46b9A4Cc'
-const stakeAddress = '0xbd2fdd03c209dcf289fa4850b320ea4cf20df6a8'
+const stakeAddress = '0x0b3b8Dde2B4EC2876B678ceaf6d5069a9beFed2a'
 
 const tokenAddress = '0xfA75692e171fe75BcA9D8B2150f4831E30269312' // mainnet busd
 //'0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7' //testnet busd
@@ -117,9 +117,13 @@ async function loadAccount() {
   accounts = await web3.eth.getAccounts()
   balance = await contract.methods.balanceOf(accounts[0]).call()
   balanceStake = await stake.methods.misnft(accounts[0]).call()
+
   
-  //console.log(balanceStake)
+  
+  console.log(balanceStake)
   balanceNFT = await contract.methods.tokensOfOwner(accounts[0]).call()
+  console.log(balanceNFT)
+  console.log(balance)
   //es aprovado
   IsAproba = await contract.methods.isApprovedForAll(accounts[0], stakeAddress).call()
   if (IsAproba) {
@@ -321,19 +325,6 @@ function roundNum(num) {
 }
 
 
-const Misnft = async () => {
-  const result = await contract.methods.tokensOfOwner(true)
-    .send({ from: accounts[0], gas: 0, value: 0 })
-    .on('transactionHash', function (hash) {
-      document.getElementById("web3_message").textContent = "Minting...";
-    })
-    .on('receipt', function (receipt) {
-      document.getElementById("web3_message").textContent = "Success! Minting finished.";
-    })
-    .catch((revertReason) => {
-      getRevertReason(revertReason.receipt.transactionHash);
-    });
-}
 
 //APROVAR
 const NftApro = async () => {
