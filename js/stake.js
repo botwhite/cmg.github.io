@@ -16,6 +16,7 @@ var balanceNFT
 var IsAproba;
 var stake;
 var rangonftss = [];
+var IDrangonftss = [];
 var iddeltango;
 var balanceStake;
 var TotalMinado;
@@ -171,6 +172,7 @@ async function loadAccount() {
         </div>
         
     `
+    
         nftdiv.appendChild(insertarnft)
       })
       .catch(function (error) {
@@ -337,7 +339,7 @@ const NftApro = async () => {
 
 //staker all
 const StakeALL = async () => {
-
+console.log(balanceNFT +" " + rangonftss)
   stake.methods.stakeNFT(balanceNFT, rangonftss).send({ from: accounts[0] }).then(result => {
 
   }).catch((err) => {
