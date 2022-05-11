@@ -500,7 +500,7 @@ function approveMiner() {
 function approve(_amount) {
   let amt;
   if (_amount != 0) {
-    amt = +spend + +_amount;
+    amt = +spend  +_amount;
     //alert(amt)
   }
   else {
